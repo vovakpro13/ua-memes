@@ -19,6 +19,8 @@ const MemeCard: FC<Props> = ({ src, name, type }) => {
   const download = () => {
     const a = document.createElement('a')
     a.href = src
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     a.download = src.split('/').pop()
     document.body.appendChild(a)
     a.click()
@@ -27,8 +29,9 @@ const MemeCard: FC<Props> = ({ src, name, type }) => {
 
   return (
     <div className='max-h-[360px] w-full rounded-[10px] flex flex-col'>
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/* @ts-ignore */}
       <div className='h-[250px] max-h-[250px] overflow-hidden relative'>{getContent()[type]}</div>
-
       <div className='py-[10px] flex justify-between items-center gap-[15px]'>
         <div className='flex-1'>
           <h5 className='text-[12px]'>{name}</h5>

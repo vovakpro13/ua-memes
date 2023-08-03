@@ -1,6 +1,8 @@
-import React from 'react'
 import * as classNames from 'classnames'
 
+// eslint-disable-next-line react/prop-types,@typescript-eslint/ban-ts-comment
+// @ts-ignore
+// eslint-disable-next-line react/prop-types
 const StoryCard = ({ bgSrc, avatarSrc }) => {
   return (
     <div
